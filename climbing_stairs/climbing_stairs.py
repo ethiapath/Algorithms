@@ -12,17 +12,24 @@ by looping the call passing in 1, 2 and 3
 if the remaning_steps doesn't exceed n
 decrementing by the number of steps
 when the remaining steps is less then zero increment the num_step_combo variable
+
+O(n!)
+
+how can I use caching to improve runtime?
+if 5 steps can be jumped 13 ways then that should 
+eliminate those possibilites from successive runs
+
 '''
 
 def climbing_stairs(n, cache=None):
   class steps:
     num_step_combo = 0
+    step_combos = []
   def climb_steps(remaining_steps):
-    if remaining_steps <= 0:
-      if remaining_steps == 0:
-        steps.num_step_combo += 1
+    # if remaining_steps <= 0:
+    if remaining_steps == 0:
+      steps.num_step_combo += 1
       return
-
     for step in range(1, 4):
       if not remaining_steps - step < 0:
         climb_steps(remaining_steps - step)
