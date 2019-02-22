@@ -22,7 +22,7 @@ this solution is somewhat efficent since it's necessary to compare every ingredi
 to make sure there is enough to make a batch.
 making it O(n) or constant time.
 
-some imporvments could include reducing the nested if statments to make
+some improvements could include reducing the nested if statments to make
 the solution more readable
 '''
 
